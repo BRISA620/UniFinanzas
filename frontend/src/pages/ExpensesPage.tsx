@@ -3,7 +3,6 @@ import { useExpenses } from '../hooks/useExpenses'
 import { ExpenseFilters } from '../components/expenses/ExpenseFilters'
 import { ExpenseForm } from '../components/expenses/ExpenseForm'
 import { Modal } from '../components/common/Modal'
-import { ConfirmDialog } from '../components/common/ConfirmDialog'
 import { Loading } from '../components/common/Loading'
 import { EmptyState } from '../components/common/EmptyState'
 import { Expense, ExpenseFilters as Filters } from '../types'
@@ -191,7 +190,7 @@ export function ExpensesPage() {
       <div className="bg-white rounded-lg shadow border border-gray-200 overflow-hidden">
         {loading ? (
           <div className="p-12">
-            <Loading text="Cargando gastos..." />
+            <Loading message="Cargando gastos..." />
           </div>
         ) : expenses.length === 0 ? (
           <div className="p-12">
@@ -425,7 +424,6 @@ export function ExpensesPage() {
               onClick={() => {
                 setShowDeleteDialog(false)
                 setSelectedExpense(null)
-                setDeleteReason('')
               }}
               className="btn-secondary"
               disabled={isSubmitting}

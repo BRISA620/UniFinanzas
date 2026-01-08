@@ -56,14 +56,14 @@ export function useQuickExpense() {
       return { previousData }
     },
 
-    onError: (err, newExpense, context) => {
+    onError: (_err, _newExpense, context) => {
       // Revertir optimistic update si falla
       if (context?.previousData) {
         queryClient.setQueryData(['dashboard', 'summary'], context.previousData)
       }
     },
 
-    onSuccess: (data) => {
+    onSuccess: () => {
       // Invalidar y refetch para obtener data real del servidor
       queryClient.invalidateQueries({ queryKey: ['dashboard', 'summary'] })
     },
