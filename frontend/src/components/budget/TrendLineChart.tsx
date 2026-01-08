@@ -1,5 +1,4 @@
 import {
-  LineChart,
   Line,
   XAxis,
   YAxis,
@@ -32,8 +31,8 @@ interface TrendLineChartProps {
 export function TrendLineChart({
   dailyData,
   budgetTotal,
-  periodStart,
-  periodEnd,
+  periodStart: _periodStart,
+  periodEnd: _periodEnd,
   currencyCode,
 }: TrendLineChartProps) {
   // Calcular la línea de proyección ideal (gasto lineal)
