@@ -4,7 +4,6 @@ import {
   TrendingDown,
   Wallet,
   CreditCard,
-  ArrowUpRight,
   ArrowDownRight,
 } from 'lucide-react'
 import { formatCurrency } from '../../utils/currency'

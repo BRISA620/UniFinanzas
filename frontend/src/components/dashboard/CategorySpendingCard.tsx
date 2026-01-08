@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { PieChart, TrendingUp } from 'lucide-react'
+import { PieChart } from 'lucide-react'
 import { CategorySpending } from '../../types'
 import { formatCurrency } from '../../utils/currency'
 import { CategoryIcon } from '../categories/CategoryIcon'

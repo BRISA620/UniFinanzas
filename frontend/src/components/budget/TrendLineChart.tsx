@@ -37,8 +37,6 @@ export function TrendLineChart({
   currencyCode,
 }: TrendLineChartProps) {
   // Calcular la línea de proyección ideal (gasto lineal)
-  const startDate = parseISO(periodStart)
-  const endDate = parseISO(periodEnd)
   const totalDays = dailyData.length
   const dailyBudget = budgetTotal / totalDays
 
